@@ -50,10 +50,6 @@ projects.each {
 
         goals 'org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent clean deploy'
 
-        if ((projectName.contains('properties'))) {
-            providedSettings ('qatools.settings.xml')
-        }
-
         wrappers {
             mavenRelease {
                 releaseGoals('release:clean release:prepare release:perform')
