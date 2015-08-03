@@ -102,8 +102,21 @@ projects.each {
             }
         }
 
-        goals 'clean verify'
+        goals 'org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent clean verify'
 
+        configure { project ->
+            project / publishers << 'hudson.plugins.sonar.SonarPublisher' {
+                jdk('(Inherit From Job)')
+                branch()
+                language()
+                mavenOpts("-Xmx1024m -Xms256m")
+                jobAdditionalProperties('-Dsonar.analysis.mode=incremental -Dsonar.github.pullRequest=${ghprbPullId} -Dsonar.github.repository=' + projectUrl)
+                settings(class: 'jenkins.mvn.DefaultSettingsProvider')
+                globalSettings(class: 'jenkins.mvn.DefaultGlobalSettingsProvider')
+                usePrivateRepository(false)
+            }
+        }
+        
         publishers {
             if (projectName.equals('allure-core'))  {
                 archiveArtifacts {
