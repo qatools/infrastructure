@@ -6,6 +6,8 @@ def projects = [
         'allure-framework/allure-cli',
         'allure-framework/allure-cucumber-jvm-adaptor',
         'allure-examples/allure-examples-parent',
+        'allure-examples/allure-testng-example',
+        'allure-examples/allure-junit-example',
         'camelot-framework/clay',
         'camelot-framework/yatomata',
         'camelot-framework/yatomata-camel',
