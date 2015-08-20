@@ -120,18 +120,26 @@ projects.each {
         }
         
         publishers {
-            if (projectName.equals('allure-core')) {
-                archiveArtifacts {
-                    pattern('allure-commandline/target/*.zip')
-                }
-                
-                publishHtml {
-                    report('allure-report-preview/target/allure-report/') {
-                        reportName('Allure report')
-                        keepAll()
-                        alwaysLinkToLastBuild()
+            switch (projectName) {
+                case 'allure-core': 
+                    archiveArtifacts {
+                        pattern('allure-commandline/target/*.zip')
                     }
-                }
+                    publishHtml {
+                        report('allure-report-preview/target/allure-report/') {
+                            reportName('Allure report')
+                            keepAll()
+                            alwaysLinkToLastBuild()
+                        }
+                    }
+                    break
+                case 'allure-teamcity-plugin':
+                    archiveArtifacts {
+                        pattern('build/target/*.zip')
+                    }
+                    break
+                default:
+                    break
             }
         }
 
