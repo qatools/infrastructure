@@ -120,13 +120,13 @@ projects.each {
         }
         
         publishers {
-            if (projectName.equals('allure-core'))  {
+            if (projectName.equals('allure-core')) {
                 archiveArtifacts {
                     pattern('allure-commandline/target/*.zip')
                 }
                 
                 publishHtml {
-                    report('allure-report-preview/target/allure-report/') {                          // since 1.28
+                    report('allure-report-preview/target/allure-report/') {
                         reportName('Allure report')
                         keepAll(true)
                         alwaysLinkToLastBuild(true)
