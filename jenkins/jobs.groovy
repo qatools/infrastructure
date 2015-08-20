@@ -128,8 +128,8 @@ projects.each {
                 publishHtml {
                     report('allure-report-preview/target/allure-report/') {
                         reportName('Allure report')
-                        keepAll(true)
-                        alwaysLinkToLastBuild(true)
+                        keepAll()
+                        alwaysLinkToLastBuild()
                     }
                 }
             }
