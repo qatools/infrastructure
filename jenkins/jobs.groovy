@@ -122,7 +122,15 @@ projects.each {
         publishers {
             if (projectName.equals('allure-core'))  {
                 archiveArtifacts {
-                    pattern('allure-report-preview/target/allure-report/')
+                    pattern('allure-commandline/target/*.zip')
+                }
+                
+                publishHtml {
+                    report('allure-report-preview/target/allure-report/') {                          // since 1.28
+                        reportName('Allure report')
+                        keepAll(true)
+                        alwaysLinkToLastBuild(true)
+                    }
                 }
             }
         }
