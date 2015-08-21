@@ -90,7 +90,7 @@ projects.each {
 
             if (projectName.equals('allure-teamcity-plugin')) {
                 archiveArtifacts {
-                    pattern('build/target/*.zip')
+                    pattern('target/*.zip')
                 }
 
             }
@@ -151,7 +151,7 @@ projects.each {
 
             if (projectName.equals('allure-teamcity-plugin')) {
                 archiveArtifacts {
-                    pattern('build/target/*.zip')
+                    pattern('target/*.zip')
                 }
 
             }
