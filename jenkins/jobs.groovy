@@ -31,7 +31,7 @@ projects.each {
 
     mavenJob(projectName + '_master-deploy') {
 
-        if (projectName.equals('properties'))  {
+        if (projectName.equals('properties')) {
             label('maven')
         } else {
             label('maven-old')
@@ -74,10 +74,25 @@ projects.each {
         }
 
         publishers {
-            if (projectName.equals('allure-core'))  {
+
+            if (projectName.equals('allure-core')) {
                 archiveArtifacts {
-                    pattern('allure-report-preview/target/allure-report/')
+                    pattern('allure-commandline/target/*.zip')
                 }
+                publishHtml {
+                    report('allure-report-preview/target/allure-report/') {
+                        reportName('Allure report')
+                        keepAll()
+                        alwaysLinkToLastBuild()
+                    }
+                }
+            }
+
+            if (projectName.equals('allure-core')) {
+                archiveArtifacts {
+                    pattern('build/target/*.zip')
+                }
+
             }
         }
 
@@ -118,28 +133,27 @@ projects.each {
                 usePrivateRepository(false)
             }
         }
-        
+
         publishers {
-            switch (projectName) {
-                case 'allure-core': 
-                    archiveArtifacts {
-                        pattern('allure-commandline/target/*.zip')
+
+            if (projectName.equals('allure-core')) {
+                archiveArtifacts {
+                    pattern('allure-commandline/target/*.zip')
+                }
+                publishHtml {
+                    report('allure-report-preview/target/allure-report/') {
+                        reportName('Allure report')
+                        keepAll()
+                        alwaysLinkToLastBuild()
                     }
-                    publishHtml {
-                        report('allure-report-preview/target/allure-report/') {
-                            reportName('Allure report')
-                            keepAll()
-                            alwaysLinkToLastBuild()
-                        }
-                    }
-                    break
-                case 'allure-teamcity-plugin':
-                    archiveArtifacts {
-                        pattern('build/target/*.zip')
-                    }
-                    break
-                default:
-                    break
+                }
+            }
+
+            if (projectName.equals('allure-core')) {
+                archiveArtifacts {
+                    pattern('build/target/*.zip')
+                }
+
             }
         }
 
