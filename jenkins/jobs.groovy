@@ -77,7 +77,7 @@ projects.each {
 
             if (projectName.equals('allure-core')) {
                 archiveArtifacts {
-                    pattern('allure-commandline/target/*.zip')
+                    pattern('allure-commandline/target/*-standalone.*')
                 }
                 publishHtml {
                     report('allure-report-preview/target/allure-report/') {
@@ -138,7 +138,7 @@ projects.each {
 
             if (projectName.equals('allure-core')) {
                 archiveArtifacts {
-                    pattern('allure-commandline/target/*.zip')
+                    pattern('allure-commandline/target/*-standalone.*')
                 }
                 publishHtml {
                     report('allure-report-preview/target/allure-report/') {
