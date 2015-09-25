@@ -18,7 +18,8 @@ def projects = [
         'yandex-qatools/htmlelements',
         'yandex-qatools/embedded-services',
         'yandex-qatools/postgresql-embedded',
-        'qatools/properties'
+        'qatools/properties',
+        'jenkinsci/allure-plugin'
 ]
 
 projects.each {
