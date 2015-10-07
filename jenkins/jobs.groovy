@@ -5,6 +5,7 @@ def projects = [
         'allure-framework/allure-teamcity-plugin',
         'allure-framework/allure-cli',
         'allure-framework/allure-cucumber-jvm-adaptor',
+        'allure-framework/allure-spock-adaptor',
         'allure-examples/allure-examples-parent',
         'allure-examples/allure-testng-example',
         'allure-examples/allure-junit-example',
