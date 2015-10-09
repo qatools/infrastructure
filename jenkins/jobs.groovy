@@ -17,6 +17,7 @@ def projects = [
         'yandex-qatools/ashot',
         'yandex-qatools/beanloader',
         'yandex-qatools/htmlelements',
+        'yandex-qatools/matchers-java',
         'yandex-qatools/embedded-services',
         'yandex-qatools/postgresql-embedded',
         'qatools/properties',
