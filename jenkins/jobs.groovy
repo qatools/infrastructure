@@ -20,6 +20,7 @@ def projects = [
         'yandex-qatools/matchers-java',
         'yandex-qatools/embedded-services',
         'yandex-qatools/postgresql-embedded',
+        'yandex-qatools/pessimistic-mongodb',
         'qatools/properties',
         'jenkinsci/allure-plugin'
 ]
@@ -34,7 +35,7 @@ projects.each {
 
     mavenJob(projectName + '_master-deploy') {
 
-        if (projectName.equals('properties')) {
+        if (projectName.equals('properties') || projectName.equals('pessimistic-mongodb')) {
             label('maven')
         } else {
             label('maven-old')
