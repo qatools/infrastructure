@@ -55,7 +55,7 @@ projects.each {
             githubPush()
         }
 
-        goals 'org.jacoco:jacoco-maven-plugin:RELEASE:prepare-agent clean deploy'
+        goals 'org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent clean deploy'
 
         wrappers {
             mavenRelease {
@@ -124,7 +124,7 @@ projects.each {
             }
         }
 
-        goals 'org.jacoco:jacoco-maven-plugin:RELEASE:prepare-agent clean verify'
+        goals 'org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:prepare-agent clean verify'
 
         configure { project ->
             project / publishers << 'hudson.plugins.sonar.SonarPublisher' {
