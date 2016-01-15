@@ -37,7 +37,7 @@ projects.each {
 
     mavenJob(projectName + '_master-deploy') {
 
-        if (projectName.equals('properties') || projectName.equals('pessimistic-mongodb') || projectName.equals('javassist-classpath-scanner')) {
+        if (projectName.equals('properties') || projectName.equals('opensource-parent') || projectName.equals('pessimistic-mongodb') || projectName.equals('javassist-classpath-scanner')) {
             label('maven')
         } else {
             label('maven-old')
