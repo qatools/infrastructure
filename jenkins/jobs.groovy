@@ -22,6 +22,7 @@ def projects = [
         'yandex-qatools/postgresql-embedded',
         'yandex-qatools/pessimistic-mongodb',
         'qatools/properties',
+        'qatools/opensource-parent',
         'jenkinsci/allure-plugin',
         'baev/javassist-classpath-scanner'
 ]
