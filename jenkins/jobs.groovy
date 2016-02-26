@@ -24,6 +24,7 @@ def projects = [
         'qatools/properties',
         'qatools/opensource-parent',
         'jenkinsci/allure-plugin',
+        'seleniumkit/selenograph',
         'baev/javassist-classpath-scanner'
 ]
 
