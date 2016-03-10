@@ -21,6 +21,7 @@ def projects = [
         'yandex-qatools/embedded-services',
         'yandex-qatools/postgresql-embedded',
         'yandex-qatools/pessimistic-mongodb',
+        'yandex-qatools/hamcrest-pojo-matcher-generator',
         'qatools/properties',
         'qatools/opensource-parent',
         'jenkinsci/allure-plugin',
