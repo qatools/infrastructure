@@ -26,7 +26,8 @@ def projects = [
         'qatools/opensource-parent',
         'jenkinsci/allure-plugin',
         'seleniumkit/selenograph',
-        'baev/javassist-classpath-scanner'
+        'baev/javassist-classpath-scanner',
+        'baev/junit.xml'
 ]
 
 projects.each {
