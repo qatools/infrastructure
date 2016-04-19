@@ -40,7 +40,7 @@ projects.each {
 
     mavenJob(projectName + '_master-deploy') {
 
-        if (projectName in ['properties','opensource-parent','pessimistic-mongodb','javassist-classpath-scanner','selenograph']) {
+        if (projectName in ['properties','opensource-parent','pessimistic-mongodb','javassist-classpath-scanner','selenograph', 'junit.xml']) {
             label('maven')
         } else {
             label('maven-old')
