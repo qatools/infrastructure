@@ -27,7 +27,8 @@ def projects = [
         'jenkinsci/allure-plugin',
         'seleniumkit/selenograph',
         'baev/javassist-classpath-scanner',
-        'baev/junit.xml'
+        'baev/junit.xml',
+        'baev/jaxb-utils'
 ]
 
 projects.each {
@@ -40,7 +41,7 @@ projects.each {
 
     mavenJob(projectName + '_master-deploy') {
 
-        if (projectName in ['properties','opensource-parent','pessimistic-mongodb','javassist-classpath-scanner','selenograph', 'junit.xml']) {
+        if (projectName in ['properties','opensource-parent','pessimistic-mongodb','javassist-classpath-scanner','selenograph','junit.xml','jaxb-utils']) {
             label('maven')
         } else {
             label('maven-old')
