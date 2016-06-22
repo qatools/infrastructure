@@ -28,7 +28,8 @@ def projects = [
         'seleniumkit/selenograph',
         'baev/javassist-classpath-scanner',
         'baev/junit.xml',
-        'baev/jaxb-utils'
+        'baev/jaxb-utils',
+        'baev/hamcrest-optional'
 ]
 
 projects.each {
@@ -41,7 +42,7 @@ projects.each {
 
     mavenJob(projectName + '_master-deploy') {
 
-        if (projectName in ['properties','opensource-parent','pessimistic-mongodb','javassist-classpath-scanner','selenograph','junit.xml','jaxb-utils']) {
+        if (projectName in ['properties','opensource-parent','pessimistic-mongodb','javassist-classpath-scanner','selenograph','junit.xml','jaxb-utils','hamcrest-optional']) {
             label('maven')
         } else {
             label('maven-old')
