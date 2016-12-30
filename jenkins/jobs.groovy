@@ -1,5 +1,5 @@
 def projects = [
-        'allure-framework/allure-core',
+        'allure-framework/allure1',
         'allure-framework/allure-report-builder',
         'allure-framework/allure-maven-plugin',
         'allure-framework/allure-teamcity-plugin',
@@ -86,7 +86,7 @@ projects.each {
 
         publishers {
 
-            if (projectName.equals('allure-core')) {
+            if (projectName.equals('allure1')) {
                 archiveArtifacts {
                     pattern('allure-commandline/target/*-standalone.*')
                 }
@@ -147,7 +147,7 @@ projects.each {
 
         publishers {
 
-            if (projectName.equals('allure-core')) {
+            if (projectName.equals('allure1')) {
                 archiveArtifacts {
                     pattern('allure-commandline/target/*-standalone.*')
                 }
