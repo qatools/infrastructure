@@ -2,7 +2,7 @@ def projects = [
         'allure-framework/allure1',
         'allure-framework/allure-report-builder',
         'allure-framework/allure-maven-plugin',
-        'allure-framework/allure-teamcity-plugin',
+        'allure-framework/allure-teamcity',
         'allure-framework/allure-cli',
         'allure-framework/allure-cucumber-jvm-adaptor',
         'allure-framework/allure-spock-adaptor',
